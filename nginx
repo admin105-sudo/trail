@@ -1,0 +1,38 @@
+check:
+
+sudo nginx -t
+sudo nginx -s reload
+sudo systemctl reload nginx
+sudo systemctl status nginx
+docker exec -it html-app nginx -t
+docker exec -it html-app nginx -s reload
+sudo tail -f /var/log/nginx/error.log
+sudo systemctl stop nginx
+sudo systemctl disable nginx
+sudo nano /etc/nginx/sites-available/default
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+logs checking:
+
+docker stop html-app
+
+docker logs html-app
+     
+docker logs -f html-app
+
+docker logs -t html-app
+
+docker exec -it html-app ls /usr/share/nginx/html
+
+docker check:
+
+docker ps
+
+ curl http://localhost:5000
+
+docker ps -a
+
+docker build -t test-nginx .
+
+
+      
